@@ -21,10 +21,67 @@ int main(){
 	int x = 1;
 	while(x!=0){
 		printf("Escolha uma opcao de 0 a 9 \n");
+		printf("/*****************************************/ \n");
+		printf("                                              \n");
+		printf("0 - Sair \n");
+		printf("1 - Calcula Fatorial \n");
+		printf("2 - Calcula se um numero é primo \n");
+		printf("3 - Verifica uma lista de primo \n");
+		printf("4 - Recebe base e expoente, calcula a potencia, depois retorna em cientifico");
+		printf("5 - Calcula a raiz recebendo base e a raiz\n");
+		printf("6 - Calcula se o ano é bissexto \n");
+		printf("7 - Calcula a media de duas notas testando se é validas \n");
+		printf("8 - Calcula a media ponderada de 3 notas \n");
+		printf("9 - Printa o nome do aluno e a matricula em hexadecimal");
+		printf("                                                 \n");
+		printf("/****************************************/ \n");
 		scanf("%d",&x);
 		caseMenu(x);
 	}
 	return 0;
+}
+
+//Menu recebendo um numero
+void caseMenu(int x){
+	
+	switch(x){
+		case(1):{
+			Fatorial();
+			break;
+		}
+		case(2):{
+			Primo();
+			break;
+		}
+		case(3):{
+			VerificaListaPrimo();
+			break;
+		}
+		case(4):{
+			Caso4();
+			break;
+		}
+		case(5):{
+			Caso5();
+			break;
+		}
+		case(6):{
+			Caso6();
+			break;
+		}
+		case(7):{
+			Caso7();
+			break;
+		}
+		case(8):{
+			Caso8();
+			break;
+		}
+		case(9):{
+			Caso9();
+			break;
+		}
+	}
 }
 
 
@@ -186,51 +243,6 @@ void Caso8(){
 void Caso9(){
 	printf("Saulo\n");
 	printf("%d \n", 0x1510010437);
-}
-
-
-//Menu recebendo um numero
-void caseMenu(int x){
-	
-	switch(x){
-		case(1):{
-			Fatorial();
-			break;
-		}
-		case(2):{
-			Primo();
-			break;
-		}
-		case(3):{
-			VerificaListaPrimo();
-			break;
-		}
-		case(4):{
-			Caso4();
-			break;
-		}
-		case(5):{
-			Caso5();
-			break;
-		}
-		case(6):{
-			Caso6();
-			break;
-		}
-		case(7):{
-			Caso7();
-			break;
-		}
-		case(8):{
-			Caso8();
-			break;
-		}
-		case(9):{
-			Caso9();
-			break;
-		}
-	}
-	
 }
 
 
