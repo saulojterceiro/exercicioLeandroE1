@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 
+//Codigo by:Saulo Terceiro
+//Computação Unipe 2019 
+
+
 void Primo();
 void Fatorial();
 void VerificaListaPrimo();
