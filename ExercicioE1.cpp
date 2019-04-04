@@ -24,21 +24,23 @@ int main();
 int main(){
 	int x = 1;
 	while(x!=0){
+
+		printf("/*************************************************************************************************************/ \n");
+		printf("                                              \n");
 		printf("Escolha uma opcao de 0 a 9 \n");
-		printf("/*****************************************/ \n");
 		printf("                                              \n");
 		printf("0 - Sair \n");
 		printf("1 - Calcula Fatorial \n");
-		printf("2 - Calcula se um numero é primo \n");
+		printf("2 - Calcula se um numero eh primo \n");
 		printf("3 - Verifica uma lista de primo \n");
-		printf("4 - Recebe base e expoente, calcula a potencia, depois retorna em cientifico");
+		printf("4 - Recebe base e expoente, calcula a potencia, depois retorna em cientifico\n");
 		printf("5 - Calcula a raiz recebendo base e a raiz\n");
-		printf("6 - Calcula se o ano é bissexto \n");
+		printf("6 - Calcula se o ano eh bissexto \n");
 		printf("7 - Calcula a media de duas notas testando se é validas \n");
 		printf("8 - Calcula a media ponderada de 3 notas \n");
-		printf("9 - Printa o nome do aluno e a matricula em hexadecimal");
-		printf("                                                 \n");
-		printf("/****************************************/ \n");
+		printf("9 - Printa o nome do aluno e a matricula em hexadecimal\n");
+		printf("                                              \n");
+		printf("/*************************************************************************************************************/ \n");
 		scanf("%d",&x);
 		caseMenu(x);
 	}
@@ -186,12 +188,12 @@ void Caso5(){
 //Calcula se o ano é bissexto
 void Caso6(){
 	int ano;
-	printf("Digite o ano para calcular  se é bissexto\n");
+	printf("Digite o ano para calcular  se eh bissexto\n");
 	scanf("%d", &ano);
 	if(ano%4==0){
-		printf("O ano é bissexto\n");
+		printf("O ano eh bissexto\n");
 	}else{
-		printf("O ano não é bissexto\n");
+		printf("O ano nao eh bissexto\n");
 	}
 }
 
@@ -235,12 +237,10 @@ void Caso8(){
 	scanf("%f",&nota3);
 	float mediaPonderada = (nota1+nota2+(nota3*2))/4;
 	if(mediaPonderada>=60){
-		printf ("Você foi aprovado com a media %0.1f \n",mediaPonderada);
+		printf ("Voce foi aprovado com a media %0.1f \n",mediaPonderada);
 	}else{
-		printf ("Você foi reprovado com a media %0.1f \n",mediaPonderada);
+		printf ("Voce foi reprovado com a media %0.1f \n",mediaPonderada);
 	}
-	
-	
 }
 
 //Printa o nome do aluno e a matricula em hexadecimal
