@@ -7,7 +7,8 @@
 
 bool Primo(int);
 void ImprimePrimo();
-void Fatorial();
+float Fatorial(float);
+void Caso1();
 void VerificaListaPrimo();
 float Potencia(float,int);
 void Caso4();
@@ -59,7 +60,7 @@ void caseMenu(int x){
 	
 	switch(x){
 		case(1):{
-			Fatorial();
+			Caso1();
 			break;
 		}
 		case(2):{
@@ -129,17 +130,23 @@ bool Primo(int x){
 	return primo;
 }
 
-//Calcula a fatorial de um numero
-void Fatorial(){
-	int x;
+//Facade fatorial
+void Caso1(){
+	float x;
 	printf("Escolha um numero para ser fatorizado\n");
-	scanf("%d",&x);
-	int somafatorial;
+	scanf("%f",&x);
+	x = Fatorial(x);
+	printf("%.f \n",x);
+}
+
+//Calcula a fatorial de um numero
+float Fatorial(float x){
+	float somafatorial;
 	for(somafatorial=x;x>1;x){
 		x--;
 		somafatorial = somafatorial * (x);
 	}
-	printf("%d\n",somafatorial);
+	return somafatorial;
 }
 
 //Verifica uma lista de numeros se cada um é primo
