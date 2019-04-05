@@ -5,19 +5,19 @@
 //Computação Unipe 2019 
 
 
-bool Primo(int);
-void ImprimePrimo();
-float Fatorial(float);
-void Caso1();
-void VerificaListaPrimo();
-float Potencia(float,int);
-void Caso4();
-float Raiz(double, double);
-void Caso5();
-void Caso6();
-void Caso7();
-void Caso8();
-void Caso9();
+bool primo(int);
+void imprimePrimo();
+float fatorial(float);
+void caso1();
+void verificaListaPrimo();
+float potencia(float,int);
+void caso4();
+float raiz(double, double);
+void caso5();
+void caso6();
+void caso7();
+void caso8();
+void caso9();
 bool notaValida(float);
 void caseMenu(int);
 int main();
@@ -44,7 +44,7 @@ int main(){
 		printf("                                              \n");
 		printf("/*************************************************************************************************************/ \n");
 		scanf("%d",&x);
-		if(x<0||x>=10){
+		if(x<0||x>9){
 			printf("Numero invalido\n");
 		}else{
 
@@ -60,52 +60,52 @@ void caseMenu(int x){
 	
 	switch(x){
 		case(1):{
-			Caso1();
+			caso1();
 			break;
 		}
 		case(2):{
-			ImprimePrimo();
+			imprimePrimo();
 			break;
 		}
 		case(3):{
-			VerificaListaPrimo();
+			verificaListaPrimo();
 			break;
 		}
 		case(4):{
-			Caso4();
+			caso4();
 			break;
 		}
 		case(5):{
-			Caso5();
+			caso5();
 			break;
 		}
 		case(6):{
-			Caso6();
+			caso6();
 			break;
 		}
 		case(7):{
-			Caso7();
+			caso7();
 			break;
 		}
 		case(8):{
-			Caso8();
+			caso8();
 			break;
 		}
 		case(9):{
-			Caso9();
+			caso9();
 			break;
 		}
 	}
 }
 
 //Imprime se o numero é primo ou não, chamando Primo()
-void ImprimePrimo(){
+void imprimePrimo(){
 	int x;
 	printf("Digite o numero para saber se eh primo:\n");
 	scanf("%d",&x);
-	bool primo;
+	bool primoNumero;
 	if(x>=1){
-		primo = Primo(x);
+		primoNumero = primo(x);
 		if(primo){
 			printf("Primo \n");
 		}else{
@@ -119,7 +119,7 @@ void ImprimePrimo(){
 
 
 //Calcula se o numero é primo ou não
-bool Primo(int x){
+bool primo(int x){
 	bool primo = true;
 	int i = 0;
 	for(i = 2;i<x;i++){
@@ -131,16 +131,16 @@ bool Primo(int x){
 }
 
 //Facade fatorial
-void Caso1(){
+void caso1(){
 	float x;
 	printf("Escolha um numero para ser fatorizado\n");
 	scanf("%f",&x);
-	x = Fatorial(x);
+	x = fatorial(x);
 	printf("%.f \n",x);
 }
 
 //Calcula a fatorial de um numero
-float Fatorial(float x){
+float fatorial(float x){
 	float somafatorial;
 	for(somafatorial=x;x>1;x){
 		x--;
@@ -150,19 +150,19 @@ float Fatorial(float x){
 }
 
 //Verifica uma lista de numeros se cada um é primo
-void VerificaListaPrimo(){
+void verificaListaPrimo(){
 	int qtNumeros;
 	printf("Digite a quantidade de numeros:\n");
 	scanf("%d", &qtNumeros);
 	int i;
 	int numeros[qtNumeros];
 	for(i=0;i<qtNumeros;i++){
-		ImprimePrimo();
+		imprimePrimo();
 	}
 }
 
 //Calcula a potencia de um numero
-float Potencia(float base,int expoente){
+float potencia(float base,int expoente){
 	int i ;
 	float novaBase = base;
 	for(i = 1;i<expoente;i++){
@@ -173,38 +173,37 @@ float Potencia(float base,int expoente){
 }
 
 //Recebe base e expoente, calcula a potencia, depois retorna em cientifico
-void Caso4(){
+void caso4(){
 	double base;
 	double expoente;		
 	printf("Digite a o ponto flutante para calcular expoente\n");		
 	scanf("%f", &base);
 	printf("Digite o expoente\n");		
 	scanf("%d", &expoente);
-	base = Potencia(base,expoente);
+	base = potencia(base,expoente);
 	printf("%0.1fe10 \n",base);
 }
 
 //Calcula a raiz recebendo base e a raiz
-float Raiz(double base, double raiz){
+float raiz(double base, double raiz){
 	base = pow(base,1/raiz);
 	return base;
 }
 
 //Chama o calculo da raiz
-void Caso5(){
+void caso5(){
 	float base;
-	int raiz;
+	int raizNumero;
 	printf("Digite a o ponto flutante para calcular sua raiz\n");
 	scanf("%f", &base);
 	printf("Digite a raiz\n");
-	scanf("%d", &raiz);
-	base = Raiz(base,raiz);
+	scanf("%d", &raizNumero);
+	base = raiz(base,raizNumero);
 	printf("%0.1fe10 \n",base);
-	
 }
 
 //Calcula se o ano é bissexto
-void Caso6(){
+void caso6(){
 	int ano;
 	printf("Digite o ano para calcular  se eh bissexto\n");
 	scanf("%d", &ano);
@@ -225,7 +224,7 @@ bool notaValida(float nota){
 }
 
 //Calcula a media de duas notas testando se é validas
-void Caso7(){
+void caso7(){
 	float nota1;
 	float nota2;
 	printf("Digite a sua nota\n");
@@ -243,7 +242,7 @@ void Caso7(){
 }
 
 //Calcula a media ponderada de 3 notas
-void Caso8(){
+void caso8(){
 	float nota1;
 	float nota2;
 	float nota3;
@@ -262,7 +261,7 @@ void Caso8(){
 }
 
 //Printa o nome do aluno e a matricula em hexadecimal
-void Caso9(){
+void caso9(){
 	printf("Saulo\n");
 	printf("%d \n", 0x1510010437);
 }
