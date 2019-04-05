@@ -43,7 +43,13 @@ int main(){
 		printf("                                              \n");
 		printf("/*************************************************************************************************************/ \n");
 		scanf("%d",&x);
-		caseMenu(x);
+		if(x<0||x>=10){
+			printf("Numero invalido\n");
+		}else{
+
+			caseMenu(x);
+		}
+
 	}
 	return 0;
 }
