@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 
-//Codigo by:Saulo Terceiro
+//Codigo by: Saulo Terceiro
 //Computação Unipe 2019 
 
 
-void Primo();
+bool Primo(int);
+void ImprimePrimo();
 void Fatorial();
 void VerificaListaPrimo();
 float Potencia(float,int);
@@ -56,7 +57,7 @@ void caseMenu(int x){
 			break;
 		}
 		case(2):{
-			Primo();
+			ImprimePrimo();
 			break;
 		}
 		case(3):{
@@ -90,32 +91,36 @@ void caseMenu(int x){
 	}
 }
 
-
-//Calcula se o numero é primo ou não
-void Primo(){
+//Imprime se o numero é primo ou não, chamando Primo()
+void ImprimePrimo(){
 	int x;
 	printf("Digite o numero para saber se eh primo:\n");
 	scanf("%d",&x);
-	bool primo = true;
-	if(x>1){
-		int i = 0;
-		for(i = 2;i<x;i++){
-			if(x%i==0){
-				primo = false;
-			}
-		}
+	bool primo;
+	if(x>=1){
+		primo = Primo(x);
 		if(primo){
 			printf("Primo \n");
 		}else{
 			printf("Nao primo \n");
-		}
+		}	
 	}else{
 		printf("Numero invalido otr\n ");
 	}
-	
 
-	
-	
+}
+
+
+//Calcula se o numero é primo ou não
+bool Primo(int x){
+	bool primo = true;
+	int i = 0;
+	for(i = 2;i<x;i++){
+		if(x%i==0){
+			primo = false;
+		}
+	}	
+	return primo;
 }
 
 //Calcula a fatorial de um numero
@@ -139,7 +144,7 @@ void VerificaListaPrimo(){
 	int i;
 	int numeros[qtNumeros];
 	for(i=0;i<qtNumeros;i++){
-		Primo();
+		ImprimePrimo();
 	}
 }
 
